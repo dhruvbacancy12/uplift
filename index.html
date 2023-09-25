@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 	<title>Index</title>
@@ -110,7 +111,7 @@
 						<h1>"A solution the mca industry has been <span class="text-gradient">dreaming</span> about"
 						</h1>
 						<div class="position-relative banner_img d-lg-none">
-							<div class="hero_img ">
+							<div class="hero_img" data-aos="fade-left">
 								<div class="hero_img_wrap">
 									<img src="imgs/Device.png" alt="hero-img">
 								</div>
@@ -133,7 +134,7 @@
 
 					</div>
 					<div class="col-lg-5 col-xl-6 pe-0 banner_img d-none d-lg-block">
-						<div class="hero_img">
+						<div class="hero_img" data-aos="fade-left">
 							<div class="hero_img_wrap">
 								<img src="imgs/Device.png" alt="hero-img">
 							</div>
@@ -603,8 +604,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
