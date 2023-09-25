@@ -627,6 +627,18 @@ main {
 		}
 	}
 
+	h1 {
+		padding-top: 100px;
+
+		@media (max-width:1439.98px) {
+			padding-top: 6.944vw;
+		}
+
+		@include MQ(tablet) {
+			padding-top: 0;
+		}
+	}
+
 	&_text {
 		line-height: 2;
 		font-size: 18px;
@@ -747,6 +759,7 @@ main {
 	background-color: #fff;
 	overflow: hidden;
 	z-index: 2;
+
 	@media (max-width:1439.98px) {
 		padding: 10vw 0 9.375vw;
 	}

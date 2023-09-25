@@ -563,6 +563,19 @@ main.first_fold:before {
     text-align: center;
   }
 }
+.hero h1 {
+  padding-top: 100px;
+}
+@media (max-width: 1439.98px) {
+  .hero h1 {
+    padding-top: 6.944vw;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hero h1 {
+    padding-top: 0;
+  }
+}
 .hero_text {
   line-height: 2;
   font-size: 18px;
