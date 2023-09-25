@@ -12,7 +12,7 @@
 }
 
 html {
-	background-color:rgba(125, 146, 255,0.6)
+	background-color: rgba(125, 146, 255, 0.6);
 }
 
 body {
@@ -703,6 +703,7 @@ main {
 		animation: 1s ease-in-out infinite;
 		animation-name: bounce;
 		padding: 30px 0 15px;
+
 		@include MQ(Mobile) {
 			margin: 0 auto;
 		}
@@ -745,6 +746,7 @@ main {
 	position: relative;
 	background-color: #fff;
 	overflow: hidden;
+
 	@media (max-width:1439.98px) {
 		padding: 10vw 0 9.375vw;
 	}
