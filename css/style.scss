@@ -746,7 +746,7 @@ main {
 	position: relative;
 	background-color: #fff;
 	overflow: hidden;
-
+	z-index: 2;
 	@media (max-width:1439.98px) {
 		padding: 10vw 0 9.375vw;
 	}
@@ -756,7 +756,7 @@ main {
 		width: 441px;
 		position: absolute;
 		left: -23%;
-		z-index: 0;
+		z-index: -1;
 		height: 460px;
 		bottom: 58px;
 		background-image: url('../imgs/Vector.png');
