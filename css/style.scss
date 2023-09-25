@@ -714,7 +714,6 @@ main {
 		max-width: 54px;
 		display: block;
 		animation: fade 2.5s linear infinite;
-		padding: 30px 0 15px;
 
 		@include MQ(Mobile) {
 			margin: 0 auto;
