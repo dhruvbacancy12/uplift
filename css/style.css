@@ -1714,17 +1714,18 @@ main.first_fold:before {
 }
 .outline .outlikne_ttl.underwrite:before {
   content: "";
-  width: 230px;
+  width: 234px;
   display: block;
   height: 1px;
   border: 1px #ffffff dashed;
   position: absolute;
   top: 0;
-  left: 26%;
+  left: 25.6%;
 }
 @media only screen and (max-width: 1199.98px) {
   .outline .outlikne_ttl.underwrite:before {
-    width: 206px;
+    width: 205px;
+    left: 26%;
   }
 }
 @media only screen and (max-width: 991px) {

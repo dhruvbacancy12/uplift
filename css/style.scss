@@ -1873,15 +1873,16 @@ main {
 			}
 			&:before {
 				content: "";
-				width: 230px;
+				width: 234px;
 				display: block;
 				height: 1px;
 				border: 1px #ffffff dashed;
 				position: absolute;
 				top: 0;
-				left: 26%;
+				left: 25.6%;
 				@include MQ(LM) {
-					width: 206px;
+					width: 205px;
+					left: 26%;
 				}
 				@include MQ(tablet) {
 					width: 184px;
