@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 	<title>Index</title>
@@ -198,11 +199,11 @@
 					<div class="row justify-content-between">
 
 						<div class="col-xl-4 col-lg-5 text-center mb-4 mb-lg-0">
-							<img src="imgs/portal.png" alt="portal">
+							<img src="imgs/portal.png" alt="portal" data-aos="zoom-in" data-aos-duration="1500">
 						</div>
 						<div class="col-lg-7">
-							<div class="portals_desc">
-								<div class="portals_desc_icon">
+							<div class="portals_desc" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+								<div class="portals_desc_icon" >
 									<img src="imgs/payment-portal.svg" alt="payment-portal">
 								</div>
 								<div class="portals_desc_text">
@@ -212,7 +213,7 @@
 									<a href="javascript:;">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
 								</div>
 							</div>
-							<div class="portals_desc align-items-center">
+							<div class="portals_desc align-items-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
 								<div class="portals_desc_icon">
 									<img src="imgs/payment-histroy.svg" alt="payment-portal">
 								</div>
@@ -238,7 +239,7 @@
 					</div>
 
 					<div class="row learn_feature">
-						<div class="col-lg-4">
+						<div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
 							<div class="learn_feature_card">
 								<div class="learn_feature_card_icon"><img src="imgs/Sales & Submission.svg" alt="sal">
 								</div>
@@ -249,7 +250,7 @@
 									it, So customers stay happy.</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
 							<div class="learn_feature_card">
 								<div class="learn_feature_card_icon"><img src="imgs/Underwriting & funding.svg"
 										alt="sal"></div>
@@ -259,7 +260,7 @@
 									it, So customers stay happy.</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
 							<div class="learn_feature_card">
 								<div class="learn_feature_card_icon"><img
 										src="imgs/Payment Processing & Collections.svg" alt="sal"></div>
@@ -360,8 +361,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		AOS.init({
+			once: true,
+		});
+	</script>
 </body>
 
 </html>

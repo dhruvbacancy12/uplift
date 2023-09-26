@@ -1798,7 +1798,7 @@ main {
 				background-color: var(--white-color);
 				padding: 40px;
 				height: 100%;
-				@include MQ(M){
+				@include MQ(Mobile){
 					padding: 25px;
 				}
 
@@ -1809,7 +1809,7 @@ main {
 				&_title {
 					margin-bottom: 24px;
 					margin-top: 12px;
-					@include MQ(M){
+					@include MQ(Mobile){
 						margin-bottom: 15px;
 					}
 				}
