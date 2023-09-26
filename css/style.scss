@@ -762,6 +762,10 @@ main {
 		height: 460px;
 		bottom: 58px;
 		background-image: url('../imgs/Vector.png');
+		background-repeat: no-repeat;
+		@media (min-width:1441px) {
+			left:-15px;
+		}
 	}
 
 	.h1 {
