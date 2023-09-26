@@ -12,7 +12,7 @@
 }
 
 html {
-	// background-color: rgba(125, 146, 255, 0.6);
+	// background-color: rgba(125, 146, 255, 0.6)
 }
 
 body {
@@ -235,7 +235,7 @@ ol {
 /* Header  */
 header {
 	position: fixed;
-	padding: 26px 0;
+	padding: 25px 0;
 	width: 100%;
 	z-index: 9;
 	left: 0;
@@ -508,7 +508,7 @@ header {
 			will-change: transform, width, height;
 			transition: visibility .3s;
 			border-radius: 5px;
-			box-shadow: 0px 0px 5px 5px rgba(59, 90, 251, 0.25);
+			box-shadow: 0 0 5px 5px rgba(59, 90, 251, 0.25);
 
 			.no-csstransitions & {
 				display: none;
@@ -572,17 +572,16 @@ header {
 			background: linear-gradient(358deg, #FAFDFF 1.13%, rgba(255, 255, 255, 0) 75.86%), radial-gradient(435.91% 151.33% at 0% 0%, #E5FBFF 0%, #EBE8FF 49.27%, #FAFDFF 100%);
 			border-radius: 15px;
 			min-width: 325px;
-			
 		}
 	}
 }
 
 
 main {
-	padding-top: 102px;
+	padding-top: 82px;
 
-	@media (max-width:1439.98px) {
-		padding-top: calc(3.472vw + 50px);
+	@include MQ(L) {
+		padding-top: 102px;
 	}
 
 	&.first_fold {
@@ -750,7 +749,6 @@ main {
 	background-color: #fff;
 	overflow: hidden;
 	z-index: 2;
-
 	@media (max-width:1439.98px) {
 		padding: 10vw 0 9.375vw;
 	}
@@ -1825,19 +1823,83 @@ main {
 .outline {
 	padding: 120px 0;
 	background-color: #0B2B5A;
+	@media (max-width:1439.98px) {
+		padding: 8.333vw 0;
+	}
 
 	h1 {
 		margin-bottom: 20px;
 	}
+	.outline_wrap{
+		max-width: 1072px;
+		margin-inline: auto;
+	}
+	.outline_ttl_wrap{
+		margin-bottom: 60px;
 
+			@include MQ(tablet) {
+				margin-bottom: 40px;
+			}
+
+			@include MQ(Mobile) {
+				margin-bottom: 30px;
+			}
+	}
 	.outlikne_ttl {
 		display: flex;
 		align-items: start;
 		text-align: right;
+		@include MQ(tablet) {
+			flex-wrap: wrap;
+		}
+		&.sales_flow {
+			padding-bottom: 90px;
+			@include MQ(tablet) {
+				padding-bottom: 30px;
+			}
+		}
+
+		&.underwrite {
+			padding-top: 60px;
+			position: relative;
+			padding-bottom: 136px;
+			>.flowchart > div:last-child{
+				span{
+					margin-right: 0;
+				}
+			}
+			@include MQ(tablet) {
+				padding-bottom: 56px;
+			}
+			&:before {
+				content: "";
+				width: 230px;
+				display: block;
+				height: 1px;
+				border: 1px #ffffff dashed;
+				position: absolute;
+				top: 0;
+				left: 26%;
+				@include MQ(LM) {
+					width: 206px;
+				}
+				@include MQ(tablet) {
+					width: 184px;
+					left: 10%;
+					top: 48px;
+				}
+			}
+		}
 
 		.title-chart {
 			width: 160px;
-			margin-right: 30px
+			margin-right: 30px;
+			@include MQ(tablet) {
+				margin-bottom: 15px;
+				margin-right: 0;
+				width: 100%;
+				text-align: left;
+			}
 		}
 
 		h5 {
@@ -1867,13 +1929,114 @@ main {
 		font-weight: 500;
 		margin-right: 44px;
 		height: 88px;
-
+		position: relative;
+		@include MQ(LM) {
+			min-width: 160px;
+			max-width: 160px;
+		}
+		@include MQ(tablet) {
+			min-width: 140px;
+			max-width: 140px;
+		}
 		&:last-child {
 			margin-right: 0;
 		}
 
 		&.has-child {
 			margin-bottom: 55px;
+			position: relative;
+
+
+
+			&:after {
+				content: "";
+				height: 55px;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 1px;
+				border: 1px dashed #fff;
+			}
+		}
+
+		small {
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			left: 100%;
+			margin: auto 0;
+			width: 44px;
+			border: 1px dashed #fff;
+
+			&.left {
+				right: 100%;
+				left: auto;
+				width: 74%;
+				@include MQ(tablet) {
+					height: 79%;
+				}
+				@include MQ(tablet) {
+					height: 82%;
+				}
+			}
+
+			&.arrow {
+				border: 0;
+				height: 44px;
+				left: 109%;
+				margin: auto 0;
+				width: 12px;
+				background-image: url(../imgs/down-arrow.svg);
+				position: absolute;
+				transform: rotate(270deg);
+				background-size: 100% 100%;
+			}
+		}
+
+		&.touch-bottom {
+			position: relative;
+
+			&:after {
+				content: "";
+				height: 435%;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 1px;
+				border: 1px dashed #fff;
+				@include MQ(tablet) {
+					height: 425%;
+				}
+				
+			}
+		}
+
+		&.arrow-up {
+			position: relative;
+
+			&:before {
+				content: "";
+				height: 58px;
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				width: 12px;
+				background-image: url('../imgs/down-arrow.svg');
+			}
+		}
+	}
+
+	.right-bottom {
+		margin-bottom: 55px;
+
+		span:first-child {
 			position: relative;
 
 			&:after {
@@ -1888,6 +2051,7 @@ main {
 				border: 1px dashed #fff;
 			}
 		}
+
 	}
 }
 
