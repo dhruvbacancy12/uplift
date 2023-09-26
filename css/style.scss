@@ -508,7 +508,7 @@ header {
 			will-change: transform, width, height;
 			transition: visibility .3s;
 			border-radius: 5px;
-			box-shadow: 0 0 5px 5px rgba(59, 90, 251, 0.25);
+			box-shadow: 0 0 15px 5px rgba(59, 90, 251, 0.25);
 
 			.no-csstransitions & {
 				display: none;
