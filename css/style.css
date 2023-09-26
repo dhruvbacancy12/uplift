@@ -7,17 +7,12 @@
   --body-color: #565656;
 }
 
-html {
-  background-color: rgba(125, 146, 255, 0.6);
-}
-
 body {
   color: var(--body-color);
   font-size: 16px;
   font-family: "roboto", sans-serif;
   background-color: #ffffff;
-  max-width: 1440px;
-  margin-inline: auto;
+  overflow-x: hidden;
 }
 
 img {
@@ -222,8 +217,6 @@ header {
   z-index: 9;
   left: 0;
   top: 0;
-  max-width: 1440px;
-  margin: 0 auto;
   right: 0;
 }
 @media (max-width: 1000px) {
@@ -534,7 +527,7 @@ main.first_fold:before {
   height: 58.542vw;
   width: 100%;
   background: linear-gradient(358deg, #FAFDFF 1.13%, rgba(255, 255, 255, 0) 75.86%), radial-gradient(435.91% 151.33% at 0% 0%, #E5FBFF 0%, #EBE8FF 49.27%, #FAFDFF 100%);
-  z-index: 0;
+  z-index: -1;
   top: 0;
   left: 0;
 }
