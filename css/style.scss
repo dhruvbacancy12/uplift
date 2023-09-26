@@ -1798,6 +1798,9 @@ main {
 				background-color: var(--white-color);
 				padding: 40px;
 				height: 100%;
+				@include MQ(M){
+					padding: 25px;
+				}
 
 				&_icon {
 					height: 56px;
@@ -1806,6 +1809,12 @@ main {
 				&_title {
 					margin-bottom: 24px;
 					margin-top: 12px;
+					@include MQ(M){
+						margin-bottom: 15px;
+					}
+				}
+				p{
+					margin-bottom: 0;
 				}
 			}
 		}

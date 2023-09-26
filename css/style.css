@@ -1640,12 +1640,25 @@ main.first_fold:before {
   padding: 40px;
   height: 100%;
 }
+@media only screen and (min-width: 600px) {
+  .portals .learn_feature_card {
+    padding: 25px;
+  }
+}
 .portals .learn_feature_card_icon {
   height: 56px;
 }
 .portals .learn_feature_card_title {
   margin-bottom: 24px;
   margin-top: 12px;
+}
+@media only screen and (min-width: 600px) {
+  .portals .learn_feature_card_title {
+    margin-bottom: 15px;
+  }
+}
+.portals .learn_feature_card p {
+  margin-bottom: 0;
 }
 
 .user_roles header {
