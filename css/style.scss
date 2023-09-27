@@ -245,7 +245,7 @@ header {
 	right: 0;
 
 	@media (max-width:1000px) {
-		background-color: #ffffff !important;
+		// background-color: #ffffff !important;
 	}
 
 	.header {
@@ -598,8 +598,9 @@ main {
 			z-index: -1;
 			top: 0;
 			left: 0;
-			@include MQ(MidMobile){
+			@media (max-width:1000px) {
 				background-image: url('../imgs/mobile-gradient.png');
+				height: 546px;
 			}
 		}
 
