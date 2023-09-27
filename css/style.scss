@@ -598,6 +598,9 @@ main {
 			z-index: -1;
 			top: 0;
 			left: 0;
+			@include MQ(MidMobile){
+				background-image: url('../imgs/mobile-gradient.png');
+			}
 		}
 
 	}

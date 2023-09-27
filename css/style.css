@@ -533,6 +533,11 @@ main.first_fold:before {
   top: 0;
   left: 0;
 }
+@media only screen and (max-width: 767px) {
+  main.first_fold:before {
+    background-image: url("../imgs/mobile-gradient.png");
+  }
+}
 
 /*hero section*/
 .hero {
