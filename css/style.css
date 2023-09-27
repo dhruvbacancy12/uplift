@@ -599,6 +599,11 @@ main.first_fold:before {
     padding-bottom: 97%;
   }
 }
+@media (min-width: 1601px) {
+  .hero .banner_img {
+    padding-bottom: 65px;
+  }
+}
 .hero_img {
   width: 740px;
   position: absolute;

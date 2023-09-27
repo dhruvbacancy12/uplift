@@ -661,6 +661,9 @@ main {
 		@include MQ(Mobile) {
 			padding-bottom: 97%;
 		}
+		@media (min-width:1601px) {
+			padding-bottom: 65px;
+		} 
 	}
 
 	&_img {
