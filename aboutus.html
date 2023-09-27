@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 	<title>Index</title>
@@ -138,7 +139,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 mission_wrap">
+					<div class="col-lg-4 mission_wrap" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
 						<div class="mission_card">
 							<div class="mission_card_icon">
 								<img src="imgs/transparency.svg" alt="benefit-img">
@@ -152,7 +153,7 @@
 								customers and partners.</p>
 						</div>
 					</div>
-					<div class="col-lg-4 mission_wrap">
+					<div class="col-lg-4 mission_wrap" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
 						<div class="mission_card">
 							<div class="mission_card_icon">
 								<img src="imgs/simplicity.svg" alt="benefit-img">
@@ -166,7 +167,7 @@
 								complexity simple so you can focus on what truly matters.</p>
 						</div>
 					</div>
-					<div class="col-lg-4 mission_wrap">
+					<div class="col-lg-4 mission_wrap" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
 						<div class="mission_card">
 							<div class="mission_card_icon">
 								<img src="imgs/growth.svg" alt="benefit-img">
@@ -200,25 +201,25 @@
 				</div>
 				<div class="row">
 					<div class="empower_strengths col-lg-3 col-sm-6">
-						<span class="counter">87%</span>
+						<span class="counter"><span class="count" data-count="87">0</span>%</span>
 						<h5 class="text-white">Revenue Increase</h5>
 						<p class="text-white">Adopters of the Purple Platform have experienced an average 87% rise in
 							revenue, leveraging our data-driven insights.</p>
 					</div>
 					<div class="empower_strengths col-lg-3 col-sm-6">
-						<span class="counter">300+</span>
+						<span class="counter"><span class="count" data-count="300">0</span>+</span>
 						<h5 class="text-white">Transformed Businesses</h5>
 						<p class="text-white">Over 300 diverse businesses have already harnessed the Purple Platform's
 							potential to drive growth.</p>
 					</div>
 					<div class="empower_strengths col-lg-3 col-sm-6">
-						<span class="counter">95%</span>
+						<span class="counter"><span class="count" data-count="95">0</span>%</span>
 						<h5 class="text-white">Faster Decisions</h5>
 						<p class="text-white">Users report a remarkable 95% reduction in decision-making time with
 							real-time metrics and streamlined analytics.</p>
 					</div>
 					<div class="empower_strengths col-lg-3 col-sm-6">
-						<span class="counter">4.9/5</span>
+						<span class="counter"><span class="count" data-count="4.9">0.0</span>/5</span>
 						<h5 class="text-white">Customer Satisfaction</h5>
 						<p class="text-white">Our top-rated customer satisfaction score of 4.9 out of 5 underscores our
 							commitment to exceptional service and innovation.</p>
@@ -364,7 +365,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="js/custom.js"></script>
+	<script>
+		AOS.init({
+			once: true,
+		});
+	</script>
 </body>
 
 </html>

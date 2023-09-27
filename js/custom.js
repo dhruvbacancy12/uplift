@@ -304,4 +304,45 @@ $(document).ready(function ($) {
 	});
 
 
+	let counted = 0;
+	$(window).scroll(function () {
+
+		const oTop = $('.empower').offset().top - window.innerHeight;
+		if (counted == 0 && $(window).scrollTop() > oTop) {
+			$('.count').each(function () {
+				const $this = $(this),
+					countTo = $this.attr('data-count');
+				let decimal = 0;
+				if ($this.text().indexOf(".") > 0) {
+					decimal = $this.text().toString().split(".")[1].length;
+				}
+
+				$({
+					countNum: $this.text().indexOf(".") > 0 ? $this.text().toString().split(".")[1].length : $this.text()
+				}).animate({
+					countNum: countTo
+				},
+
+					{
+
+						duration: 2000,
+						easing: 'swing',
+						step: function () {
+							let num = this.countNum;
+							console.log(num);
+							$this.text(Number(num).toFixed(decimal));
+						},
+						complete: function () {
+							let num = this.countNum;
+							$this.text(Number(num).toFixed(decimal));
+						}
+
+					});
+			});
+			counted = 1;
+		}
+
+	});
+
+
 });
