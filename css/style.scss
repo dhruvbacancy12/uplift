@@ -448,7 +448,7 @@ header {
 			}
 
 			&:hover {
-				color: #6754E8;
+				color: rgba(0, 0, 0, 0.7);
 
 				i {
 					margin-left: 5px;
@@ -508,7 +508,7 @@ header {
 			will-change: transform, width, height;
 			transition: visibility .3s;
 			border-radius: 5px;
-			box-shadow: 0 0 15px 5px rgba(59, 90, 251, 0.25);
+			box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
 
 			.no-csstransitions & {
 				display: none;
@@ -592,7 +592,9 @@ main {
 			position: absolute;
 			height: 58.542vw;
 			width: 100%;
-			background: linear-gradient(358deg, #FAFDFF 1.13%, rgba(255, 255, 255, 0.00) 75.86%), radial-gradient(435.91% 151.33% at 0% 0%, #E5FBFF 0%, #EBE8FF 49.27%, #FAFDFF 100%);
+			background-image: url('../imgs/gradient.jpg');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 			z-index: -1;
 			top: 0;
 			left: 0;
@@ -607,9 +609,6 @@ main {
 	padding: 55px 0 97px;
 	position: relative;
 
-	// @media (min-width:1601px) {
-	// 	padding: 3.819vw 0 6.736vw;
-	// }
 	@media (max-width:1439.98px) {
 		padding: 25px 0 6.736vw;
 	}
@@ -627,10 +626,16 @@ main {
 			text-align: center;
 		}
 	}
-
+	.col-xl-6{
+		@include media-wlg {
+			width: 58%;
+		}
+	}
 	h1 {
 		padding-top: 100px;
-
+		@include media-wlg {
+			font-size: 58px;
+		}
 		@media (max-width:1439.98px) {
 			padding-top: 6.944vw;
 		}
@@ -648,9 +653,6 @@ main {
 
 	.banner_img {
 		padding-bottom: 45%;
-		// @media (min-width:1601px) {
-		// 	padding-bottom: 41.250vw;
-		// }
 
 		@include MQ(tablet) {
 			padding-bottom: 77%;
@@ -668,6 +670,10 @@ main {
 		top: 20px;
 		right: 0;
 		z-index: 2;
+		@include media-wlg {
+			width: 800px;
+			height: 755px;
+		}
 
 		@media (max-width:1439.98px) {
 			width: 51.389vw;
@@ -749,6 +755,7 @@ main {
 	background-color: #fff;
 	overflow: hidden;
 	z-index: 2;
+
 	@media (max-width:1439.98px) {
 		padding: 10vw 0 9.375vw;
 	}
@@ -1362,8 +1369,11 @@ main {
 		border-radius: 20px;
 		background-color: #FFF;
 		box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.05);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-		@media (max-width:991px) {
+		@include MQ(tablet) {
 			width: 90px;
 			height: 90px;
 			padding: 12px;
@@ -1383,7 +1393,7 @@ main {
 		align-items: center;
 		justify-content: space-around;
 		gap: 24px;
-		animation: scroll-x 60s linear infinite;
+		animation: scroll-x 30s linear infinite;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
@@ -1802,7 +1812,8 @@ main {
 				background-color: var(--white-color);
 				padding: 40px;
 				height: 100%;
-				@include MQ(Mobile){
+
+				@include MQ(Mobile) {
 					padding: 25px;
 				}
 
@@ -1813,11 +1824,13 @@ main {
 				&_title {
 					margin-bottom: 24px;
 					margin-top: 12px;
-					@include MQ(Mobile){
+
+					@include MQ(Mobile) {
 						margin-bottom: 15px;
 					}
 				}
-				p{
+
+				p {
 					margin-bottom: 0;
 				}
 			}
@@ -1836,6 +1849,7 @@ main {
 .outline {
 	padding: 120px 0;
 	background-color: #0B2B5A;
+
 	@media (max-width:1439.98px) {
 		padding: 8.333vw 0;
 	}
@@ -1843,30 +1857,36 @@ main {
 	h1 {
 		margin-bottom: 20px;
 	}
-	.outline_wrap{
+
+	.outline_wrap {
 		max-width: 1072px;
 		margin-inline: auto;
 	}
-	.outline_ttl_wrap{
+
+	.outline_ttl_wrap {
 		margin-bottom: 60px;
 
-			@include MQ(tablet) {
-				margin-bottom: 40px;
-			}
+		@include MQ(tablet) {
+			margin-bottom: 40px;
+		}
 
-			@include MQ(Mobile) {
-				margin-bottom: 30px;
-			}
+		@include MQ(Mobile) {
+			margin-bottom: 30px;
+		}
 	}
+
 	.outlikne_ttl {
 		display: flex;
 		align-items: start;
 		text-align: right;
+
 		@include MQ(tablet) {
 			flex-wrap: wrap;
 		}
+
 		&.sales_flow {
 			padding-bottom: 90px;
+
 			@include MQ(tablet) {
 				padding-bottom: 30px;
 			}
@@ -1876,17 +1896,20 @@ main {
 			padding-top: 60px;
 			position: relative;
 			padding-bottom: 136px;
-			>.flowchart > div:last-child{
-				span{
+
+			>.flowchart>div:last-child {
+				span {
 					margin-right: 0;
 				}
 			}
+
 			@include MQ(tablet) {
 				padding-bottom: 56px;
 			}
+
 			&:before {
 				content: "";
-				width: 234px;
+				width: 230px;
 				display: block;
 				height: 1px;
 				border: 1px #ffffff dashed;
@@ -1897,6 +1920,7 @@ main {
 					width: 205px;
 					left: 26%;
 				}
+
 				@include MQ(tablet) {
 					width: 184px;
 					left: 10%;
@@ -1908,6 +1932,7 @@ main {
 		.title-chart {
 			width: 160px;
 			margin-right: 30px;
+
 			@include MQ(tablet) {
 				margin-bottom: 15px;
 				margin-right: 0;
@@ -1944,14 +1969,17 @@ main {
 		margin-right: 44px;
 		height: 88px;
 		position: relative;
+
 		@include MQ(LM) {
 			min-width: 160px;
 			max-width: 160px;
 		}
+
 		@include MQ(tablet) {
 			min-width: 140px;
 			max-width: 140px;
 		}
+
 		&:last-child {
 			margin-right: 0;
 		}
@@ -1989,9 +2017,11 @@ main {
 				right: 100%;
 				left: auto;
 				width: 74%;
+
 				@include MQ(tablet) {
 					height: 79%;
 				}
+
 				@include MQ(tablet) {
 					height: 82%;
 				}
@@ -2023,10 +2053,11 @@ main {
 				margin: 0 auto;
 				width: 1px;
 				border: 1px dashed #fff;
+
 				@include MQ(tablet) {
 					height: 425%;
 				}
-				
+
 			}
 		}
 

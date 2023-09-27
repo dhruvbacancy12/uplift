@@ -400,7 +400,7 @@ header .header_logo {
     margin-left: 5px;
   }
   .cd-morph-dropdown .main-nav > ul > li > a:hover {
-    color: #6754E8;
+    color: rgba(0, 0, 0, 0.7);
   }
   .cd-morph-dropdown .main-nav > ul > li > a:hover i {
     margin-left: 5px;
@@ -451,7 +451,7 @@ header .header_logo {
     will-change: transform, width, height;
     transition: visibility 0.3s;
     border-radius: 5px;
-    box-shadow: 0 0 15px 5px rgba(59, 90, 251, 0.25);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
   }
   .no-csstransitions .cd-morph-dropdown .dropdown-list {
     display: none;
@@ -526,7 +526,9 @@ main.first_fold:before {
   position: absolute;
   height: 58.542vw;
   width: 100%;
-  background: linear-gradient(358deg, #FAFDFF 1.13%, rgba(255, 255, 255, 0) 75.86%), radial-gradient(435.91% 151.33% at 0% 0%, #E5FBFF 0%, #EBE8FF 49.27%, #FAFDFF 100%);
+  background-image: url("../imgs/gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   z-index: -1;
   top: 0;
   left: 0;
@@ -556,8 +558,18 @@ main.first_fold:before {
     text-align: center;
   }
 }
+@media (min-width: 1900px) {
+  .hero .col-xl-6 {
+    width: 58%;
+  }
+}
 .hero h1 {
   padding-top: 100px;
+}
+@media (min-width: 1900px) {
+  .hero h1 {
+    font-size: 58px;
+  }
 }
 @media (max-width: 1439.98px) {
   .hero h1 {
@@ -594,6 +606,12 @@ main.first_fold:before {
   top: 20px;
   right: 0;
   z-index: 2;
+}
+@media (min-width: 1900px) {
+  .hero_img {
+    width: 800px;
+    height: 755px;
+  }
 }
 @media (max-width: 1439.98px) {
   .hero_img {
@@ -1230,8 +1248,11 @@ main.first_fold:before {
   border-radius: 20px;
   background-color: #FFF;
   box-shadow: 0px 4px 44px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .tagline .taglline_marquee_img {
     width: 90px;
     height: 90px;
@@ -1252,7 +1273,7 @@ main.first_fold:before {
   align-items: center;
   justify-content: space-around;
   gap: 24px;
-  animation: scroll-x 60s linear infinite;
+  animation: scroll-x 30s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
   .tagline .marquee__group {
@@ -1733,7 +1754,7 @@ main.first_fold:before {
 }
 .outline .outlikne_ttl.underwrite:before {
   content: "";
-  width: 234px;
+  width: 230px;
   display: block;
   height: 1px;
   border: 1px #ffffff dashed;

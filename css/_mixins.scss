@@ -1,29 +1,50 @@
 // center vertically and/or horizontally an absolute positioned element
 
-@mixin center($xy:xy) {
-  @if $xy == xy {
+@mixin center($xy: xy) {
+  @if $xy ==xy {
     left: 50%;
     top: 50%;
     bottom: auto;
     right: auto;
     transform: translateX(-50%) translateY(-50%);
   }
-  @else if $xy == x {
+
+  @else if $xy ==x {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
   }
-  @else if $xy == y {
+
+  @else if $xy ==y {
     top: 50%;
     bottom: auto;
     transform: translateY(-50%);
   }
 }
 
-// border radius
+@mixin media-wlg {
+  @media (min-width: 1900px) {
+    @content;
+  }
+}
 
-@mixin border-radius($radius:.25em) {
-  border-radius: $radius;
+
+@function get-vw-wlg($target) {
+  $vw-context: (
+    1601 *.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-wmd($target) {
+  $vw-context: (
+    768 *.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-wsm($target) {
+  $vw-context: (
+    360 *.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
 }
 
 // antialiasing mode font rendering
