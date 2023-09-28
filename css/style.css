@@ -570,6 +570,7 @@ main.first_fold:before {
 @media (min-width: 1900px) {
   .hero h1 {
     font-size: 58px;
+    padding-top: 160px;
   }
 }
 @media (max-width: 1439.98px) {
@@ -600,7 +601,7 @@ main.first_fold:before {
     padding-bottom: 97%;
   }
 }
-@media (min-width: 1601px) {
+@media (min-width: 1900px) {
   .hero .banner_img {
     padding-bottom: 65px;
   }
@@ -1545,6 +1546,10 @@ main.first_fold:before {
 .contact_form .contact_type_text a {
   color: var(--white-color);
   text-decoration: none;
+}
+.contact_form button {
+  min-width: 112px;
+  max-width: 112px;
 }
 .contact_form .iti {
   display: block;

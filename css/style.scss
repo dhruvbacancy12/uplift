@@ -639,6 +639,7 @@ main {
 		padding-top: 100px;
 		@include media-wlg {
 			font-size: 58px;
+			padding-top: 160px;
 		}
 		@media (max-width:1439.98px) {
 			padding-top: 6.944vw;
@@ -665,7 +666,7 @@ main {
 		@include MQ(Mobile) {
 			padding-bottom: 97%;
 		}
-		@media (min-width:1601px) {
+		@include media-wlg {
 			padding-bottom: 65px;
 		} 
 	}
@@ -1690,6 +1691,10 @@ main {
 				text-decoration: none;
 			}
 		}
+	}
+	button{
+		min-width: 112px;
+		max-width: 112px;
 	}
 
 	.iti {
