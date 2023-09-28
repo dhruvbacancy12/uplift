@@ -666,6 +666,7 @@ main {
 
 		@include MQ(tablet) {
 			padding-bottom: 77%;
+			right: -12px;
 		}
 
 		@include MQ(Mobile) {
