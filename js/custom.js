@@ -285,16 +285,16 @@ $(document).ready(function ($) {
 
 	var equalHeight = function () {
 		//  the height of each column is reset to default calculated by browser
-		$('.learn_feature_card_title').css('height', 'auto');
+		$('.learn_feature_card_title,.empower_strengths h5').css('height', 'auto');
 		var maxHeight = 0;
 		// get the maximum height
-		$('.learn_feature_card_title').each(function () {
+		$('.learn_feature_card_title,.empower_strengths h5').each(function () {
 			if ($(this).height() > maxHeight) {
 				maxHeight = $(this).height();
 			}
 		});
 		// the maximum height is set to each height of column
-		$('.learn_feature_card_title').css('height', maxHeight);
+		$('.learn_feature_card_title,.empower_strengths h5').css('height', maxHeight);
 	};
 	//  equal height set on page load
 	equalHeight();
