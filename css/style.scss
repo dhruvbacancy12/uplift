@@ -598,6 +598,7 @@ main {
 			z-index: -1;
 			top: 0;
 			left: 0;
+
 			@media (max-width:1000px) {
 				background-image: url('../imgs/mobile-gradient.png');
 				height: 546px;
@@ -617,10 +618,6 @@ main {
 		padding: 25px 0 6.736vw;
 	}
 
-	@include MQ(tablet) {
-		padding-top: 40px;
-	}
-
 	h1,
 	.hero_text,
 	.mb-hero_btn {
@@ -629,18 +626,26 @@ main {
 			margin-inline: auto;
 			text-align: center;
 		}
+
+		@include MQ(Mobile) {
+			text-align: left;
+		}
 	}
-	.col-xl-6{
+
+	.col-xl-6 {
 		@include media-wlg {
 			width: 58%;
 		}
 	}
+
 	h1 {
 		padding-top: 100px;
+
 		@include media-wlg {
 			font-size: 58px;
 			padding-top: 160px;
 		}
+
 		@media (max-width:1439.98px) {
 			padding-top: 6.944vw;
 		}
@@ -666,9 +671,10 @@ main {
 		@include MQ(Mobile) {
 			padding-bottom: 97%;
 		}
+
 		@include media-wlg {
 			padding-bottom: 65px;
-		} 
+		}
 	}
 
 	&_img {
@@ -678,6 +684,7 @@ main {
 		top: 20px;
 		right: 0;
 		z-index: 2;
+
 		@include media-wlg {
 			width: 800px;
 			height: 755px;
@@ -729,8 +736,12 @@ main {
 		display: block;
 		animation: fade 2.5s linear infinite;
 
-		@include MQ(Mobile) {
+		@include MQ(tablet) {
 			margin: 0 auto;
+		}
+
+		@include MQ(Mobile) {
+			margin-left: 0;
 		}
 
 		&:hover {
@@ -778,8 +789,9 @@ main {
 		bottom: 58px;
 		background-image: url('../imgs/Vector.png');
 		background-repeat: no-repeat;
+
 		@media (min-width:1441px) {
-			left:-10%;
+			left: -10%;
 		}
 	}
 
@@ -1692,7 +1704,8 @@ main {
 			}
 		}
 	}
-	button{
+
+	button {
 		min-width: 112px;
 		max-width: 112px;
 	}
@@ -1928,6 +1941,7 @@ main {
 				position: absolute;
 				top: 0;
 				left: 25.6%;
+
 				@include MQ(LM) {
 					width: 205px;
 					left: 26%;

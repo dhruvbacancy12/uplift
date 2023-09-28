@@ -546,17 +546,19 @@ main.first_fold:before {
   }
 }
 @media only screen and (max-width: 991px) {
-  .hero {
-    padding-top: 40px;
-  }
-}
-@media only screen and (max-width: 991px) {
   .hero h1,
   .hero .hero_text,
   .hero .mb-hero_btn {
     max-width: 490px;
     margin-inline: auto;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .hero h1,
+  .hero .hero_text,
+  .hero .mb-hero_btn {
+    text-align: left;
   }
 }
 @media (min-width: 1900px) {
@@ -664,9 +666,14 @@ main.first_fold:before {
   display: block;
   animation: fade 2.5s linear infinite;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 991px) {
   .hero_anchor {
     margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .hero_anchor {
+    margin-left: 0;
   }
 }
 .hero_anchor:hover svg path {
